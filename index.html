@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#03441F">
+  <title>Villa Niny · Hospedaje Campestre en San Gil, Santander</title>
+  <meta name="description"
+    content="Casa campestre privada en San Gil, Santander. Toda la finca para tu grupo: hasta 12 personas, jacuzzi a cielo abierto, zona BBQ y cocina propia. RNT 83494.">
+  <link rel="icon" href="assets/img/logo.png" type="image/x-icon">
+  <!-- Tipografías: Fraunces (display serif) + Work Sans (texto) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Work+Sans:wght@300;400;500;600&display=swap">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <a class="skip-link" href="#inicio">Saltar al contenido principal</a>
+
+  <!-- ==========================================================================
+     SPRITE DE ICONOS (Lucide, MIT). Se referencia con <use href="#i-nombre">
+     ========================================================================== -->
+  <svg class="icon-sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <symbol id="i-menu" viewBox="0 0 24 24">
+        <path d="M4 6h16" />
+        <path d="M4 12h16" />
+        <path d="M4 18h16" />
+      </symbol>
+      <symbol id="i-close" viewBox="0 0 24 24">
+        <path d="M18 6 6 18" />
+        <path d="m6 6 12 12" />
+      </symbol>
+      <symbol id="i-chevron-left" viewBox="0 0 24 24">
+        <path d="m15 18-6-6 6-6" />
+      </symbol>
+      <symbol id="i-chevron-right" viewBox="0 0 24 24">
+        <path d="m9 18 6-6-6-6" />
+      </symbol>
+      <symbol id="i-chevron-down" viewBox="0 0 24 24">
+        <path d="m6 9 6 6 6-6" />
+      </symbol>
+      <symbol id="i-check" viewBox="0 0 24 24">
+        <path d="M20 6 9 17l-5-5" />
+      </symbol>
+      <symbol id="i-arrow-right" viewBox="0 0 24 24">
+        <path d="M5 12h14" />
+        <path d="m12 5 7 7-7 7" />
+      </symbol>
+      <symbol id="i-arrow-up" viewBox="0 0 24 24">
+        <path d="m5 12 7-7 7 7" />
+        <path d="M12 19V5" />
+      </symbol>
+      <symbol id="i-leaf" viewBox="0 0 24 24">
+        <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" />
+        <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
+      </symbol>
+      <symbol id="i-waves" viewBox="0 0 24 24">
+        <path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1" />
+        <path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1" />
+        <path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1" />
+      </symbol>
+      <symbol id="i-flame" viewBox="0 0 24 24">
+        <path
+          d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5Z" />
+      </symbol>
+      <symbol id="i-paw" viewBox="0 0 24 24">
+        <circle cx="11" cy="4" r="2" />
+        <circle cx="18" cy="8" r="2" />
+        <circle cx="20" cy="16" r="2" />
+        <path d="M9 10a5 5 0 0 1 5 5v3.5a3.5 3.5 0 0 1-6.84 1.045Q6.52 17.48 4.46 16.84A3.5 3.5 0 0 1 5.5 10Z" />
+      </symbol>
+      <symbol id="i-chef-hat" viewBox="0 0 24 24">
+        <path
+          d="M17 21a1 1 0 0 0 1-1v-5.35c0-.457.316-.844.727-1.041a4 4 0 0 0-2.134-7.589 5 5 0 0 0-9.186 0 4 4 0 0 0-2.134 7.588c.411.198.727.585.727 1.041V20a1 1 0 0 0 1 1Z" />
+        <path d="M6 17h12" />
+      </symbol>
+      <symbol id="i-car" viewBox="0 0 24 24">
+        <path
+          d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2" />
+        <path d="M9 17h6" />
+        <circle cx="6.5" cy="17" r="2.5" />
+        <circle cx="16.5" cy="17" r="2.5" />
+      </symbol>
+      <symbol id="i-bus" viewBox="0 0 24 24">
+        <path d="M8 6v6" />
+        <path d="M15 6v6" />
+        <path d="M2 12h19.6" />
+        <path
+          d="M18 18h3s.5-1.7.8-2.8c.1-.4.2-.8.2-1.2 0-.4-.1-.8-.2-1.2l-1.4-5C20.1 6.8 19.1 6 18 6H4a2 2 0 0 0-2 2v10h3" />
+        <circle cx="7" cy="18" r="2" />
+        <path d="M9 18h5" />
+        <circle cx="16" cy="18" r="2" />
+      </symbol>
+      <symbol id="i-dices" viewBox="0 0 24 24">
+        <rect width="12" height="12" x="2" y="10" rx="2" />
+        <path d="m17.92 14 3.5-3.5a2.24 2.24 0 0 0 0-3l-5-4.92a2.24 2.24 0 0 0-3 0L10 6" />
+        <path d="M6 18h.01" />
+        <path d="M10 14h.01" />
+        <path d="M15 6h.01" />
+        <path d="M18 9h.01" />
+      </symbol>
+      <symbol id="i-wifi" viewBox="0 0 24 24">
+        <path d="M12 20h.01" />
+        <path d="M2 8.82a15 15 0 0 1 20 0" />
+        <path d="M5 12.86a10 10 0 0 1 14 0" />
+        <path d="M8.5 16.43a5 5 0 0 1 7 0" />
+      </symbol>
+      <symbol id="i-instagram" viewBox="0 0 24 24">
+        <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+        <path d="M17.5 6.5h.01" />
+      </symbol>
+      <symbol id="i-facebook" viewBox="0 0 24 24">
+        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+      </symbol>
+      <symbol id="i-whatsapp" viewBox="0 0 24 24">
+        <path d="M4.5 19.5 5.9 15.4A7.6 7.6 0 1 1 8.9 18.4l-4.4 1.1Z" />
+        <path d="M9 9.5c0 3 2.5 5.5 5.5 5.5" />
+      </symbol>
+      <symbol id="i-map-pin" viewBox="0 0 24 24">
+        <path d="M20 10c0 4.99-5.54 10.19-7.4 11.8a1 1 0 0 1-1.2 0C9.54 20.19 4 14.99 4 10a8 8 0 0 1 16 0" />
+        <circle cx="12" cy="10" r="3" />
+      </symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24">
+        <path
+          d="M13.83 16.57a1 1 0 0 0 1.22-.3l.35-.47A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.47.35a1 1 0 0 0-.29 1.23 14 14 0 0 0 6.39 6.39" />
+      </symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24">
+        <path d="m22 7-8.99 5.73a2 2 0 0 1-2.01 0L2 7" />
+        <rect width="20" height="16" x="2" y="4" rx="2" />
+      </symbol>
+      <symbol id="i-calendar" viewBox="0 0 24 24">
+        <path d="M8 2v4" />
+        <path d="M16 2v4" />
+        <rect width="18" height="18" x="3" y="4" rx="2" />
+        <path d="M3 10h18" />
+      </symbol>
+      <symbol id="i-users" viewBox="0 0 24 24">
+        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+        <circle cx="9" cy="7" r="4" />
+        <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+      </symbol>
+      <symbol id="i-expand" viewBox="0 0 24 24">
+        <path d="M8 3H5a2 2 0 0 0-2 2v3" />
+        <path d="M21 8V5a2 2 0 0 0-2-2h-3" />
+        <path d="M3 16v3a2 2 0 0 0 2 2h3" />
+        <path d="M16 21h3a2 2 0 0 0 2-2v-3" />
+      </symbol>
+      <symbol id="i-alert" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="10" />
+        <path d="M12 8v4" />
+        <path d="M12 16h.01" />
+      </symbol>
+      <symbol id="i-shield" viewBox="0 0 24 24">
+        <path
+          d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- ==========================================================================
+     HEADER + NAVEGACIÓN
+     ========================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="wrap header-inner">
+
+      <a class="brand" href="#inicio" aria-label="Villa Niny, ir al inicio">
+        <span class="brand-name">Villa Niny</span>
+        <span class="brand-tag">Hospedaje Campestre</span>
+      </a>
+
+      <nav class="site-nav" id="siteNav" aria-label="Navegación principal">
+        <ul class="nav-links">
+          <li><a class="nav-link" href="#inicio">Inicio</a></li>
+          <li><a class="nav-link" href="#habitaciones">Habitaciones</a></li>
+          <li><a class="nav-link" href="#experiencia">Experiencia</a></li>
+          <li><a class="nav-link" href="#comodidades">Comodidades</a></li>
+          <li><a class="nav-link" href="#contacto">Contacto</a></li>
+        </ul>
+        <a class="btn btn-outline btn-sm nav-cta"
+          href="https://api.whatsapp.com/send/?phone=573107309933&amp;text&amp;type=phone_number&amp;app_absent=0"
+          target="_blank" rel="noopener noreferrer" data-reserva="Consultar">Consultar</a>
+      </nav>
+
+      <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="siteNav"
+        aria-label="Abrir menú de navegación">
+        <svg class="ico" aria-hidden="true">
+          <use href="#i-menu"></use>
+        </svg>
+        <svg class="ico ico-close" aria-hidden="true">
+          <use href="#i-close"></use>
+        </svg>
+      </button>
+
+    </div>
+  </header>
+  <div class="nav-backdrop" id="navBackdrop" hidden></div>
+
+  <main>
+
+    <!-- ========================================================================
+       HERO
+       ======================================================================== -->
+    <section class="hero" id="inicio">
+      <div class="hero-media" aria-hidden="true">
+        <img src="assets/img/hero-portada.jpg"
+          alt="Jacuzzi a cielo abierto en casa campestre Villa Niny en San Gil, Santander" loading="eager"
+          fetchpriority="high" width="1400" height="1050">
+      </div>
+
+      <div class="wrap hero-inner">
+        <div class="hero-copy">
+          <span class="eyebrow eyebrow-terracotta">Casa campestre privada · San Gil, Santander</span>
+          <h1 class="hero-title">
+            Exclusividad<br>
+            toda la <em>villa</em> para tu grupo
+          </h1>
+          <p class="hero-lead">
+            Casa campestre amoblada con capacidad hasta 12 personas en un solo lugar, a solo 5 minutos de San Gil.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-gold"
+              href="https://api.whatsapp.com/send/?phone=573107309933&amp;text&amp;type=phone_number&amp;app_absent=0"
+              target="_blank" rel="noopener noreferrer" data-reserva="Consultar disponibilidad y tarifa">
+              Reserva ya!
+              <svg class="ico" aria-hidden="true">
+                <use href="#i-arrow-right"></use>
+              </svg>
+            </a>
+            <a class="btn btn-ghost" href="#habitaciones">Ver habitaciones</a>
+          </div>
+          <p class="hero-rate-note">
+            Tarifas personalizadas según tus fechas, temporada y número de huéspedes.
+          </p>
+        </div>
+
+      </div>
+
+      <a class="scroll-cue" href="#experiencia-triada" aria-label="Ver más contenido">
+        <span class="scroll-cue-line" aria-hidden="true"></span>
+      </a>
+    </section>
+
+    <!-- Separador decorativo (rama) -->
+    <div class="branch-divider" aria-hidden="true">
+      <svg viewBox="0 0 220 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5 17 H90" stroke="currentColor" stroke-width="1" />
+        <path d="M130 17 H215" stroke="currentColor" stroke-width="1" />
+        <path d="M110 17c0-8-6-12-14-12M110 17c0 8 6 12 14 12M110 17c-6-4-14-3-18 3M110 17c6-4 14-3 18 3"
+          stroke="currentColor" stroke-width="1" />
+        <circle cx="110" cy="17" r="2.6" class="branch-dot" />
+      </svg>
+    </div>
+
+    <!-- ========================================================================
+       TRÍADA: Naturaleza / Jacuzzi / BBQ
+       ======================================================================== -->
+    <section class="section section-sand triad" id="experiencia-triada">
+      <div class="wrap">
+        <div class="triad-grid">
+
+          <article class="triad-item reveal">
+            <svg class="triad-ico" aria-hidden="true">
+              <use href="#i-leaf"></use>
+            </svg>
+            <span class="triad-num">I.</span>
+            <h3>Naturaleza y relax</h3>
+            <p>Respira aire puro rodeado de paisajes verdes. Un entorno diseñado para el descanso absoluto, caminatas
+              tranquilas y avistamiento de aves de la región.</p>
+          </article>
+
+          <article class="triad-item reveal">
+            <svg class="triad-ico" aria-hidden="true">
+              <use href="#i-waves"></use>
+            </svg>
+            <span class="triad-num">II.</span>
+            <h3>Jacuzzi a cielo abierto</h3>
+            <p>Relájate bajo las estrellas o disfruta del sol en nuestro hidromasaje al aire libre. Un espacio exclusivo
+              diseñado
+              para desconectar el cuerpo y renovar la mente.</p>
+          </article>
+
+          <article class="triad-item reveal">
+            <svg class="triad-ico" aria-hidden="true">
+              <use href="#i-flame"></use>
+            </svg>
+            <span class="triad-num">III.</span>
+            <h3>Zona BBQ y terraza</h3>
+            <p>El plan perfecto para disfrutar en familia o con amigos. Comparte tardes inolvidables y prepara un asado
+              espectacular con vistas al cielo.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+       HABITACIONES
+       ======================================================================== -->
+    <section class="section split" id="habitaciones">
+      <div class="wrap split-grid">
+
+        <div class="split-copy reveal">
+          <span class="eyebrow eyebrow-terracotta">Alojamiento</span>
+          <h2>Habitaciones diseñadas para tu descanso</h2>
+          <p>Cuatro habitaciones con ventilación natural cruzada. Espacios pensados para el bienestar de todo el grupo —
+            despierta cada mañana con el canto de las aves y una vista inigualable hacia la naturaleza.</p>
+        </div>
+
+        <!-- ============================================================
+           Carrusel de habitaciones
+           ============================================================ -->
+        <div class="split-media reveal">
+          <div class="carousel" id="roomCarousel" role="group" aria-roledescription="carrusel"
+            aria-label="Habitaciones de Villa Niny">
+
+            <div class="carousel-viewport" id="roomViewport">
+              <ul class="carousel-track">
+
+                <li class="carousel-slide" role="group" aria-roledescription="diapositiva"
+                  aria-label="Habitación 1 de 4">
+                  <button class="photo photo-framed photo-zoom" type="button"
+                    data-lightbox="assets/img/habitacion-01.jpg" data-caption="Habitación 1 de Villa Niny."
+                    aria-label="Ampliar foto: habitación 1 de Villa Niny">
+                    <img src="assets/img/habitacion-01.jpg" alt="Habitación de Villa Niny con camas reales" width="1024"
+                      height="768" loading="lazy">
+                    <span class="zoom-badge" aria-hidden="true"><svg class="ico">
+                        <use href="#i-expand"></use>
+                      </svg></span>
+                  </button>
+                </li>
+
+                <li class="carousel-slide" role="group" aria-roledescription="diapositiva"
+                  aria-label="Habitación 2 de 4">
+                  <button class="photo photo-framed photo-zoom" type="button"
+                    data-lightbox="assets/img/habitacion-02.jpg" data-caption="Habitación 2 de Villa Niny."
+                    aria-label="Ampliar foto: habitación 2 de Villa Niny">
+                    <img src="assets/img/habitacion-02.jpg"
+                      alt="Habitación rústica con vista a la naturaleza en Villa Niny, San Gil" width="1024"
+                      height="768" loading="lazy">
+                    <span class="zoom-badge" aria-hidden="true"><svg class="ico">
+                        <use href="#i-expand"></use>
+                      </svg></span>
+                  </button>
+                </li>
+
+                <li class="carousel-slide" role="group" aria-roledescription="diapositiva"
+                  aria-label="Habitación 3 de 4">
+                  <button class="photo photo-framed photo-zoom" type="button"
+                    data-lightbox="assets/img/habitacion-03.jpg" data-caption="Habitación 3 de Villa Niny."
+                    aria-label="Ampliar foto: habitación 3 de Villa Niny">
+                    <img src="assets/img/habitacion-03.jpg" alt="Habitación campestre y fresca para grupos en San Gil"
+                      width="1024" height="768" loading="lazy">
+                    <span class="zoom-badge" aria-hidden="true"><svg class="ico">
+                        <use href="#i-expand"></use>
+                      </svg></span>
+                  </button>
+                </li>
+
+                <li class="carousel-slide" role="group" aria-roledescription="diapositiva"
+                  aria-label="Habitación 4 de 4">
+                  <button class="photo photo-framed photo-zoom" type="button"
+                    data-lightbox="assets/img/habitacion-04.jpg" data-caption="Habitación 4 de Villa Niny."
+                    aria-label="Ampliar foto: habitación 4 de Villa Niny">
+                    <img src="assets/img/habitacion-04.jpg" alt="Habitación de Villa Niny con camas reales" width="1024"
+                      height="768" loading="lazy">
+                    <span class="zoom-badge" aria-hidden="true"><svg class="ico">
+                        <use href="#i-expand"></use>
+                      </svg></span>
+                  </button>
+                </li>
+
+              </ul>
+            </div>
+
+            <button class="carousel-nav carousel-prev" type="button" aria-label="Habitación anterior">
+              <svg class="ico" aria-hidden="true">
+                <use href="#i-chevron-left"></use>
+              </svg>
+            </button>
+            <button class="carousel-nav carousel-next" type="button" aria-label="Habitación siguiente">
+              <svg class="ico" aria-hidden="true">
+                <use href="#i-chevron-right"></use>
+              </svg>
+            </button>
+
+            <div class="carousel-bar">
+              <p class="carousel-count">
+                <span class="carousel-current">01</span><span class="carousel-sep">/</span><span
+                  class="carousel-total">03</span>
+              </p>
+              <ul class="carousel-dots" aria-label="Ir a una habitación"></ul>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+       EXPERIENCIA — finca privada (fondo verde)
+       ======================================================================== -->
+    <section class="section section-forest split" id="experiencia">
+      <div class="wrap split-grid split-reverse">
+
+        <div class="split-copy reveal">
+          <span class="eyebrow eyebrow-gold">Ofrecemos algo más que un hospedaje</span>
+          <p class="lead-on-dark">Disfruta de la exclusividad de tener toda la propiedad para tu grupo. Sin compartir
+            con otros huéspedes, con total libertad para relajarte, organizar tu asado y disfrutar de la naturaleza en
+            un
+            entorno seguro y privado.</p>
+          <div class="split-actions">
+            <a class="btn btn-gold"
+              href="https://api.whatsapp.com/send/?phone=573107309933&amp;text&amp;type=phone_number&amp;app_absent=0"
+              target="_blank" rel="noopener noreferrer" data-reserva="Cotizar mi estadía">
+              Cotizar mi estadía
+              <svg class="ico" aria-hidden="true">
+                <use href="#i-arrow-right"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <figure class="split-media reveal">
+          <button class="photo photo-framed photo-framed-light photo-zoom" type="button"
+            data-lightbox="assets/img/terraza.jpg" data-caption="Terraza privada con zona de mesa en Villa Niny"
+            aria-label="Ampliar foto: terraza privada con zona de mesa en Villa Niny">
+            <img src="assets/img/terraza.jpg" alt="Terraza privada con zona de mesa en Villa Niny" width="1024"
+              height="768" loading="lazy">
+            <span class="zoom-badge" aria-hidden="true"><svg class="ico">
+                <use href="#i-expand"></use>
+              </svg></span>
+          </button>
+        </figure>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+       JACUZZI, COMEDOR Y COCINA
+       ======================================================================== -->
+    <section class="section section-linen">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <span class="eyebrow eyebrow-forest">Espacios pensados para disfrutar juntos</span>
+          <h2>Jacuzzi, comedor y cocina propia</h2>
+        </header>
+
+        <div class="cards-grid">
+
+          <figure class="card-photo reveal">
+            <button class="photo photo-zoom" type="button" data-lightbox="assets/img/jacuzzi.jpg"
+              data-caption="Hidromasaje al aire libre" aria-label="Ampliar foto: jacuzzi al aire libre">
+              <img src="assets/img/jacuzzi.jpg"
+                alt="Jacuzzi al aire libre rodeado de naturaleza en Villa Niny, Santander" width="1024" height="768"
+                loading="lazy">
+              <span class="zoom-badge" aria-hidden="true"><svg class="ico">
+                  <use href="#i-expand"></use>
+                </svg></span>
+            </button>
+            <figcaption>Hidromasaje al aire libre, agua temperatura ambiente</figcaption>
+          </figure>
+
+          <figure class="card-photo reveal">
+            <button class="photo photo-zoom" type="button" data-lightbox="assets/img/comedor.jpg"
+              data-caption="Comedor y zona social para todo el grupo."
+              aria-label="Ampliar foto: comedor y zona social amplia">
+              <img src="assets/img/comedor.jpg" alt="Comedor y zona social amplia para grupos y asados familiares"
+                width="1024" height="768" loading="lazy">
+              <span class="zoom-badge" aria-hidden="true"><svg class="ico">
+                  <use href="#i-expand"></use>
+                </svg></span>
+            </button>
+            <figcaption>Comedor y zona social para todo el grupo.</figcaption>
+          </figure>
+
+          <figure class="card-photo reveal">
+            <button class="photo photo-zoom" type="button" data-lightbox="assets/img/cocina.jpg"
+              data-caption="Cocina totalmente equipada." aria-label="Ampliar foto: cocina totalmente equipada">
+              <img src="assets/img/cocina.jpg" alt="Cocina totalmente equipada para huéspedes en San Gil" width="1100"
+                height="625" loading="lazy">
+              <span class="zoom-badge" aria-hidden="true"><svg class="ico">
+                  <use href="#i-expand"></use>
+                </svg></span>
+            </button>
+            <figcaption>Cocina totalmente equipada.</figcaption>
+          </figure>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+       CINCO MOTIVOS
+       ======================================================================== -->
+    <section class="section section-linen motivos">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <span class="eyebrow eyebrow-terracotta">Somos más que un lugar de hospedaje</span>
+          <h2><strong>5 </strong>razones para reservar<br>en Villa Niny</h2>
+        </header>
+
+        <ol class="motivos-grid">
+          <li class="motivo reveal">
+            <span class="motivo-num">01</span>
+            <div>
+              <h4>Exclusividad total</h4>
+              <p>Toda la casa reservada para tu grupo. Sin extraños, sin zonas compartidas.</p>
+            </div>
+          </li>
+          <li class="motivo reveal">
+            <span class="motivo-num">02</span>
+            <div>
+              <h4>Ubicación estratégica</h4>
+              <p>A pocos minutos de San Gil y en la ruta perfecta para visitar Barichara, Curití o Panachi.</p>
+            </div>
+          </li>
+          <li class="motivo reveal">
+            <span class="motivo-num">03</span>
+            <div>
+              <h4>Zona BBQ y cocina</h4>
+              <p>Espacios amplios y equipados para tus asados y comidas familiares.</p>
+            </div>
+          </li>
+          <li class="motivo reveal">
+            <span class="motivo-num">04</span>
+            <div>
+              <h4>Somos Pet Friendly</h4>
+              <p>Tus peluditos son completamente bienvenidos y tienen espacio de sobra para correr.</p>
+            </div>
+          </li>
+          <li class="motivo reveal">
+            <span class="motivo-num">05</span>
+            <div>
+              <h4>Naturaleza y calma</h4>
+              <p>Entorno completamente verde, seguro y privado, ideal para desconectarse de la rutina y respirar aire
+                puro.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+       COMODIDADES
+       ======================================================================== -->
+    <section class="section section-sand" id="comodidades">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <span class="eyebrow eyebrow-terracotta">Comodidades</span>
+          <h2>Todo lo que necesitas, incluido</h2>
+        </header>
+
+        <ul class="amen-grid">
+          <li class="amen-item reveal"><svg class="ico" aria-hidden="true">
+              <use href="#i-paw"></use>
+            </svg><span>Aceptamos mascotas</span></li>
+          <li class="amen-item reveal"><svg class="ico" aria-hidden="true">
+              <use href="#i-chef-hat"></use>
+            </svg><span>Cocina equipada</span></li>
+          <li class="amen-item reveal"><svg class="ico" aria-hidden="true">
+              <use href="#i-car"></use>
+            </svg><span>Parqueadero, 4 vehículos</span></li>
+          <li class="amen-item reveal"><svg class="ico" aria-hidden="true">
+              <use href="#i-bus"></use>
+            </svg><span>Servicio de transporte</span></li>
+          <li class="amen-item reveal"><svg class="ico" aria-hidden="true">
+              <use href="#i-dices"></use>
+            </svg><span>Juegos de mesa</span></li>
+          <li class="amen-item reveal"><svg class="ico" aria-hidden="true">
+              <use href="#i-wifi"></use>
+            </svg><span>Wi‑Fi</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+       TESTIMONIOS (PRUEBA SOCIAL)
+       ======================================================================== -->
+    <section class="section section-linen section-testimonials" id="testimonios">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <span class="eyebrow eyebrow-forest">Testimonios</span>
+          <h2>Valoraciones de nuestros huéspedes</h2>
+        </header>
+
+        <div class="cards-grid">
+
+          <a href="https://www.airbnb.com.co/rooms/46039302/reviews?location=San%20Gil%2C%20Santander&search_mode=regular_search&adults=1&check_in=2026-09-05&check_out=2026-09-10&children=0&infants=0&pets=0&source_impression_id=p3_1788629157_P3upv33BHuLSzKdO&previous_page_section_name=1001&federated_search_id=49e61b8c-84b1-4651-b7b4-f57fb957d485&review_page_entrypoint=show_all"
+            target="_blank" rel="noopener noreferrer" class="testimonial-card reveal">
+            <div class="stars" aria-label="5 de 5 estrellas">★★★★★</div>
+            <blockquote>"Tranquilo e impecable. El espacio es ideal para una escapada privada para sumergirse en la
+              naturaleza y..."</blockquote>
+            <p class="author">— Val <span>(Ver reseña completa)</span></p>
+          </a>
+
+          <a href="https://www.booking.com/hotel/co/villa-niny.es.html?aid=318615&label=Spanish_Colombia_ES_CO_20153959105-JvWA_BiunE_YalmU9PDZ_QS813028063629%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwl-162435870265%3Alp1029396%3Ali%3Adec%3Adm%3Aag20153959105%3Acmp313803625&sid=877c9861bb7d066992ef9156cdd71293&dest_id=-597529&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=1&hpos=1&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&srepoch=1788629788&srpvid=de3d7bc8b4dc09dd&type=total&ucfs=1&#tab-reviews"
+            target="_blank" rel="noopener noreferrer" class="testimonial-card reveal">
+            <div class="stars" aria-label="5 de 5 estrellas">★★★★★</div>
+            <blockquote>"Muy cómodo y acogedor el apartamento, se destaca la amabilidad y la atención de don Nelson.
+              Excelente lugar para alojarse de forma cómoda y segura...</blockquote>
+            <p class="author">— Andres <span>(Ver reseña completa)</span></p>
+          </a>
+
+          <a href="https://www.airbnb.com.co/rooms/46039302/reviews?location=San%20Gil%2C%20Santander&search_mode=regular_search&adults=1&check_in=2026-09-05&check_out=2026-09-10&children=0&infants=0&pets=0&source_impression_id=p3_1788629157_P3upv33BHuLSzKdO&previous_page_section_name=1001&federated_search_id=49e61b8c-84b1-4651-b7b4-f57fb957d485&review_page_entrypoint=show_all"
+            target="_blank" rel="noopener noreferrer" class="testimonial-card reveal">
+            <div class="stars" aria-label="5 de 5 estrellas">★★★★★</div>
+            <blockquote>"Mi familia y yo disfrutamos mucho de la estadía. Nelson fue muy amable, nos recomendó lugares a
+              los que podíamos ir, nos facilito indicacio..."</blockquote>
+            <p class="author">— Angelica. <span>(Ver reseña completa)</span></p>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+       GALERÍA
+       ======================================================================== -->
+    <section class="section section-sand section-gallery">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <span class="eyebrow eyebrow-terracotta">Galería</span>
+          <h2>Así se vive Villa Niny</h2>
+        </header>
+
+        <div class="cards-grid">
+
+          <figure class="card-photo reveal">
+            <button class="photo photo-zoom" type="button" data-lightbox="assets/img/sala.jpg"
+              data-caption="Sala de estar con vista al jardín."
+              aria-label="Ampliar foto: sala de estar con vista al jardín">
+              <img src="assets/img/sala.jpg" alt="Sala de estar con vista al jardín" width="1024" height="768"
+                loading="lazy">
+              <span class="zoom-badge" aria-hidden="true"><svg class="ico">
+                  <use href="#i-expand"></use>
+                </svg></span>
+            </button>
+            <figcaption>Sala de estar con vista al jardín.</figcaption>
+          </figure>
+
+          <figure class="card-photo reveal">
+            <button class="photo photo-zoom" type="button" data-lightbox="assets/img/zona-social.jpg"
+              data-caption="Zona social, ideal para compartir en grupo."
+              aria-label="Ampliar foto: zona social con sofá y sillas">
+              <img src="assets/img/zona-social.jpg" alt="Zona social con sofá y sillas" width="1024" height="575"
+                loading="lazy">
+              <span class="zoom-badge" aria-hidden="true"><svg class="ico">
+                  <use href="#i-expand"></use>
+                </svg></span>
+            </button>
+            <figcaption>Zona social, ideal para compartir en grupo.</figcaption>
+          </figure>
+
+          <figure class="card-photo reveal">
+            <button class="photo photo-zoom" type="button" data-lightbox="assets/img/bano.jpg"
+              data-caption="Baños privados y equipados." aria-label="Ampliar foto: baño privado">
+              <img src="assets/img/bano.jpg" alt="Baño privado" width="576" height="768" loading="lazy">
+              <span class="zoom-badge" aria-hidden="true"><svg class="ico">
+                  <use href="#i-expand"></use>
+                </svg></span>
+            </button>
+            <figcaption>Baños privados y equipados.</figcaption>
+          </figure>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+     FOOTER / CONTACTO
+     ========================================================================== -->
+  <footer class="site-footer" id="contacto">
+    <div class="wrap">
+      <div class="foot-grid">
+
+        <div class="foot-brand">
+          <p class="foot-logo">Villa Niny</p>
+          <p class="foot-address">
+            Hospedaje Campestre · RNT 83494<br>
+            Km 4 vía San Gil – Bucaramanga<br>
+            San Gil, Santander
+          </p>
+          <a href="https://drive.google.com/file/d/1QD28C-HcOJzATIh7VkF9o_Pi_Hd6jv7k/view" target="_blank"
+            rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">Políticas y Normas de
+            Hospedaje</a>
+          <ul class="socials">
+            <li><a href="https://www.instagram.com/villaniny/" target="_blank" rel="noopener noreferrer"
+                aria-label="Instagram de Villa Niny"><svg class="ico" aria-hidden="true">
+                  <use href="#i-instagram"></use>
+                </svg></a></li>
+            <li><a href="https://www.facebook.com/VILLANINY" target="_blank" rel="noopener noreferrer"
+                aria-label="Facebook de Villa Niny"><svg class="ico" aria-hidden="true">
+                  <use href="#i-facebook"></use>
+                </svg></a></li>
+            <li><a
+                href="https://api.whatsapp.com/send/?phone=573107309933&amp;text&amp;type=phone_number&amp;app_absent=0"
+                target="_blank" rel="noopener noreferrer" aria-label="WhatsApp de Villa Niny"><svg class="ico"
+                  aria-hidden="true">
+                  <use href="#i-whatsapp"></use>
+                </svg></a></li>
+            <li><a href="https://www.google.com/maps/search/6.566565,+-73.108798" target="_blank"
+                rel="noopener noreferrer" aria-label="Cómo llegar en Google Maps"><svg class="ico" aria-hidden="true">
+                  <use href="#i-map-pin"></use>
+                </svg></a></li>
+          </ul>
+        </div>
+
+        <div class="foot-contact">
+          <h3>Contacto</h3>
+          <ul class="contact-list">
+            <li>
+              <svg class="ico" aria-hidden="true">
+                <use href="#i-phone"></use>
+              </svg>
+              <a href="tel:+573107309933">Tel: +57 310 730 9933</a>
+            </li>
+            <li>
+              <svg class="ico" aria-hidden="true">
+                <use href="#i-mail"></use>
+              </svg>
+              <a href="mailto:villaniny@gmail.com">villaniny@gmail.com</a>
+            </li>
+            <li>
+              <svg class="ico" aria-hidden="true">
+                <use href="#i-whatsapp"></use>
+              </svg>
+              <a href="https://api.whatsapp.com/send/?phone=573107309933&amp;text&amp;type=phone_number&amp;app_absent=0"
+                target="_blank" rel="noopener noreferrer" data-reserva="Cotizar por WhatsApp">Cotizar por WhatsApp</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="bottom-bar">
+        <span>© 2026 Hospedaje Campestre Villa Niny — San Gil, Santander</span>
+        <a class="to-top" href="#inicio">
+          Volver arriba
+          <svg class="ico" aria-hidden="true">
+            <use href="#i-arrow-up"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <a class="whatsapp-float"
+    href="https://api.whatsapp.com/send/?phone=573107309933&amp;text&amp;type=phone_number&amp;app_absent=0"
+    target="_blank" rel="noopener noreferrer" data-reserva="Consultar disponibilidad y tarifa"
+    aria-label="Consultar disponibilidad y tarifa por WhatsApp">
+    <svg class="ico" aria-hidden="true">
+      <use href="#i-whatsapp"></use>
+    </svg>
+    <span>Consultar</span>
+  </a>
+
+  <!-- ==========================================================================
+     MODAL — Consultar disponibilidad y tarifa (compone el mensaje de WhatsApp)
+     ========================================================================== -->
+  <div class="modal" id="reservaModal" hidden>
+    <div class="modal-overlay" data-close-modal></div>
+
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="reservaTitle"
+      aria-describedby="reservaDesc">
+      <button class="modal-close" type="button" data-close-modal aria-label="Cerrar">
+        <svg class="ico" aria-hidden="true">
+          <use href="#i-close"></use>
+        </svg>
+      </button>
+
+      <span class="eyebrow eyebrow-terracotta">Reserva directa</span>
+      <p class="modal-desc" id="reservaDesc">
+        Te confirmaremos por WhatsApp la disponibilidad y mejor tarifa vigente.
+      </p>
+
+      <form class="reserva-form" id="reservaForm" novalidate>
+        <div class="field">
+          <label for="fEntrada">
+            <svg class="ico" aria-hidden="true">
+              <use href="#i-calendar"></use>
+            </svg>
+            Fecha de llegada
+          </label>
+          <input type="date" id="fEntrada" name="entrada" required>
+        </div>
+
+        <div class="field">
+          <label for="fSalida">
+            <svg class="ico" aria-hidden="true">
+              <use href="#i-calendar"></use>
+            </svg>
+            Fecha de salida
+          </label>
+          <input type="date" id="fSalida" name="salida" required>
+        </div>
+
+        <div class="field field-full">
+          <label for="fHuespedes">
+            <svg class="ico" aria-hidden="true">
+              <use href="#i-users"></use>
+            </svg>
+            Número de huéspedes
+          </label>
+          <select id="fHuespedes" name="huespedes">
+            <option value="">Selecciona una opción</option>
+            <option value="1">1 persona</option>
+            <option value="2">2 personas</option>
+            <option value="4">4 personas</option>
+            <option value="6">6 personas</option>
+            <option value="8">8 personas</option>
+            <option value="10">10 personas</option>
+            <option value="12">12 personas</option>
+            <option value="12+">Más de 12 personas</option>
+          </select>
+        </div>
+
+        <p class="form-error" id="reservaError" role="alert" hidden>
+          <svg class="ico" aria-hidden="true">
+            <use href="#i-alert"></use>
+          </svg>
+          <span id="reservaErrorText"></span>
+        </p>
+
+        <button class="btn btn-gold btn-block" type="submit">
+          <svg class="ico" aria-hidden="true">
+            <use href="#i-whatsapp"></use>
+          </svg>
+          Enviar consulta por WhatsApp
+        </button>
+
+        <p class="form-note">
+          Se abrirá WhatsApp con tu mensaje ya redactado. También puedes escribirnos directo al
+          <a href="https://api.whatsapp.com/send/?phone=573107309933&amp;text&amp;type=phone_number&amp;app_absent=0"
+            target="_blank" rel="noopener noreferrer">+57 310 730 9933</a>.
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+     LIGHTBOX de fotografías
+     ========================================================================== -->
+  <div class="lightbox" id="lightbox" hidden>
+    <div class="modal-overlay" data-close-lightbox></div>
+
+    <div class="lightbox-panel" role="dialog" aria-modal="true" aria-label="Galería de fotografías">
+      <button class="lightbox-close" type="button" data-close-lightbox aria-label="Cerrar galería">
+        <svg class="ico" aria-hidden="true">
+          <use href="#i-close"></use>
+        </svg>
+      </button>
+      <button class="lightbox-nav lightbox-prev" type="button" aria-label="Foto anterior">
+        <svg class="ico" aria-hidden="true">
+          <use href="#i-chevron-left"></use>
+        </svg>
+      </button>
+      <figure class="lightbox-figure">
+        <img id="lightboxImg" src="" alt="">
+        <figcaption id="lightboxCaption"></figcaption>
+      </figure>
+      <button class="lightbox-nav lightbox-next" type="button" aria-label="Foto siguiente">
+        <svg class="ico" aria-hidden="true">
+          <use href="#i-chevron-right"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+
+</html>
